@@ -9,5 +9,8 @@ result = DatabaseConnection.exec_params(sql, [])
 
 # Print out each record from the result set .
 result.each do |record|
-  p record
+  puts "#{record["id"]}. #{record["name"]} recipe." 
+  puts "Time required: #{record["time_required"]} minutes."
+  puts "Rating: #{record["rating"]}/5"
+  puts ""
 end
